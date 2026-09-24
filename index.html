@@ -312,12 +312,28 @@
     padding: 0.15rem 0.45rem;
     border-radius: 20px;
     width: fit-content;
-    border: 1px solid transparent;
+    background: var(--bg2);
+    color: var(--subtle);
+    border: 1px solid var(--border);
   }
-  .d-water { background: var(--accent-light); color: var(--accent); border-color: var(--accent); }
-  .d-agri  { background: var(--warm-bg);      color: var(--warm);   border-color: var(--warm); }
-  .d-eco   { background: var(--eco-bg);        color: var(--eco);    border-color: var(--eco); }
-  .d-ai    { background: var(--ai-bg);         color: var(--ai);     border-color: var(--ai); }
+  .card-finding {
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border);
+  }
+  .finding-label {
+    font-size: 0.62rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--subtle);
+    display: block;
+    margin-bottom: 0.1rem;
+  }
+  .finding-val {
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 1.4;
+  }
 
   .card-title {
     font-size: 0.9rem;
@@ -340,7 +356,6 @@
     align-items: center;
     padding-top: 0.55rem;
     border-top: 1px solid var(--border);
-    margin-top: auto;
   }
   .tag {
     font-size: 0.65rem;
@@ -350,12 +365,6 @@
     border: 1px solid var(--border);
     padding: 0.1rem 0.4rem;
     border-radius: 20px;
-  }
-  .output-line {
-    font-size: 0.72rem;
-    font-weight: 600;
-    color: var(--accent);
-    margin-left: auto;
   }
 
   /* ── PUBLICATIONS ── */
@@ -561,78 +570,96 @@
     <div class="projects-grid">
 
       <div class="card">
-        <span class="domain-pill d-water">Meta-Analysis</span>
+        <span class="domain-pill">Meta-Analysis</span>
         <h3 class="card-title">National Water Quality Valuation</h3>
         <p class="card-desc">Meta-analysed 29 hedonic pricing studies (623 observations) via meta-regression and geospatial benefit transfer to estimate the national economic value of water-quality improvements across Canada. Produced a province-level estimate for government cost-benefit analysis.</p>
+        <div class="card-finding">
+          <span class="finding-label">Finding</span>
+          <span class="finding-val">National WQ value estimated at $8.26B across Canada</span>
+        </div>
         <div class="card-foot">
           <span class="tag">Meta-regression</span>
           <span class="tag">Hedonic pricing</span>
           <span class="tag">Benefit transfer</span>
           <span class="tag">GIS · R</span>
-          <span class="output-line">$8.26B · CWRJ 2025</span>
         </div>
       </div>
 
       <div class="card">
-        <span class="domain-pill d-agri">Simulation</span>
+        <span class="domain-pill">Simulation</span>
         <h3 class="card-title">Irrigation Water Economics under Climate Uncertainty</h3>
         <p class="card-desc">Coupled AquaCrop-OS biophysical crop simulation with stochastic economic analysis across 397 Saskatchewan fields to estimate irrigation water shadow prices where market prices do not exist. Informs provincial water allocation policy under climate change.</p>
+        <div class="card-finding">
+          <span class="finding-label">Finding</span>
+          <span class="finding-val">Shadow prices estimated across 397 Saskatchewan fields under climate scenarios</span>
+        </div>
         <div class="card-foot">
           <span class="tag">AquaCrop-OS</span>
           <span class="tag">Stochastic simulation</span>
           <span class="tag">Non-market valuation</span>
           <span class="tag">Python · R</span>
-          <span class="output-line">397 fields · Under review</span>
         </div>
       </div>
 
       <div class="card">
-        <span class="domain-pill d-eco">Revealed Preference</span>
+        <span class="domain-pill">Revealed Preference</span>
         <h3 class="card-title">Biodiversity Benefits of Birdwatching</h3>
         <p class="card-desc">Built a Travel Cost Method model on 3.5 million eBird citizen-science records to estimate individualized recreational demand for freshwater ecosystems. Applied random-parameters discrete choice modelling to recover respondent-level WTP distributions.</p>
+        <div class="card-finding">
+          <span class="finding-label">Finding</span>
+          <span class="finding-val">Individualized WTP distributions recovered from 3.5M citizen-science records</span>
+        </div>
         <div class="card-foot">
           <span class="tag">Travel Cost Method</span>
           <span class="tag">RPL · MNL</span>
           <span class="tag">Citizen science</span>
           <span class="tag">R</span>
-          <span class="output-line">3.5M records · ERE 2023</span>
         </div>
       </div>
 
       <div class="card">
-        <span class="domain-pill d-water">Choice Modeling</span>
+        <span class="domain-pill">Choice Modeling</span>
         <h3 class="card-title">Water Quality Stated Preference Survey</h3>
         <p class="card-desc">Designed a four-version split-sample discrete choice experiment (n=3,850) with GIS-assigned status-quo conditions to isolate the causal effect of spatial context on water quality valuations. Combined stated and revealed preference data in mixed logit and RPL models.</p>
+        <div class="card-finding">
+          <span class="finding-label">Finding</span>
+          <span class="finding-val">Spatial context significantly shifts stated WTP for water quality (n=3,850)</span>
+        </div>
         <div class="card-foot">
           <span class="tag">Discrete choice experiment</span>
           <span class="tag">Mixed logit · RPL</span>
           <span class="tag">Survey design · GIS</span>
-          <span class="output-line">n=3,850 · CJAE (in press)</span>
         </div>
       </div>
 
       <div class="card">
-        <span class="domain-pill d-eco">Policy Evaluation</span>
+        <span class="domain-pill">Policy Evaluation</span>
         <h3 class="card-title">Grassland Conservation Program Economics</h3>
         <p class="card-desc">Estimated landowner willingness-to-accept compensation for USDA grassland conservation enrollment using contingent valuation and probit modelling. Integrated U.S. Census covariates and USGS spatial data via ArcGIS; benchmarked total program cost against federal allocations.</p>
+        <div class="card-finding">
+          <span class="finding-label">Finding</span>
+          <span class="finding-val">Mean WTA of $290/acre for grassland program enrollment (n=242)</span>
+        </div>
         <div class="card-foot">
           <span class="tag">Contingent valuation</span>
           <span class="tag">Probit model</span>
           <span class="tag">ArcGIS · n=242</span>
-          <span class="output-line">$290/acre WTA · Eco. Svcs. 2021</span>
         </div>
       </div>
 
       <div class="card">
-        <span class="domain-pill d-ai">ML Engineering</span>
+        <span class="domain-pill">ML Engineering</span>
         <h3 class="card-title">AI Agent &amp; RAG Pipeline Engineering</h3>
         <p class="card-desc">Developed multi-agent orchestration systems, retrieval-augmented generation pipelines, and a fine-tuned Qwen2.5-3B LoRA adapter (val loss 0.649). Also built a drought-detection time-series classification pipeline on multi-source satellite and climate data using Databricks.</p>
+        <div class="card-finding">
+          <span class="finding-label">Finding</span>
+          <span class="finding-val">Qwen2.5-3B LoRA adapter reached val loss 0.649; RAG pipeline deployed in production</span>
+        </div>
         <div class="card-foot">
           <span class="tag">RAG pipelines</span>
           <span class="tag">LoRA fine-tuning</span>
           <span class="tag">MCP integration</span>
           <span class="tag">FastAPI · Pinecone</span>
-          <span class="output-line">Qwen2.5-3B · Claude API</span>
         </div>
       </div>
 
