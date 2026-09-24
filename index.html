@@ -73,39 +73,6 @@
     margin: 0;
   }
 
-  /* ── NAV ── */
-  nav {
-    position: sticky;
-    top: env(safe-area-inset-top, 0px);
-    z-index: 100;
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
-    padding-inline: clamp(1rem, 5vw, 3.5rem);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 48px;
-  }
-  .nav-name {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--text);
-    text-decoration: none;
-  }
-  .nav-links {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-    margin: 0; padding: 0;
-  }
-  .nav-links a {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--muted);
-    text-decoration: none;
-  }
-  .nav-links a:hover { color: var(--accent); }
-
   /* ── PAGE OUTER ── */
   .page {
     max-width: 1000px;
@@ -479,7 +446,6 @@
   @media (max-width: 720px) {
     .top { grid-template-columns: 1fr; gap: 2rem; }
     .photo-wrap { width: 160px; height: 160px; }
-    .nav-links { display: none; }
     .output-line { margin-left: 0; width: 100%; }
   }
 
@@ -492,17 +458,6 @@
     * { transition: none !important; }
   }
 </style>
-
-<!-- NAV -->
-<nav>
-  <a class="nav-name" href="#top">taj771 / portfolio</a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#research">Research</a></li>
-    <li><a href="#publications">Publications</a></li>
-    <li><a href="#skills">Skills</a></li>
-  </ul>
-</nav>
 
 <div class="page">
 
